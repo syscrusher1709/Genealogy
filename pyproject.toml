@@ -1,0 +1,41 @@
+[project]
+name = "Genealogy"
+version = "2025.07.29"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+readme = "README.md"
+license = "BSD-3-Clause-Clear"
+license-files = ["LICEN[CS]E*"]
+description = "Simple database for genealogy and obituary data, suitable for individuals or small orgs"
+
+dependencies = [
+    "typer ~=0.16.0",
+    "click >=8.2.1",
+    "rich >=10.11.0",
+    "PyYAML >=6.0",
+#    "typer_shell @ file:///home/scourtney/src/typer-shell.git/dist/typer_shell-0.2.0-py3-none-any.whl",
+]
+
+[project.urls]
+Homepage = "https://github.com/syscrusher1709/Genealogy"
+Issues = "https://github.com/syscrusher1709/Genealogy/issues"
+Documentation = "https://github.com/syscrusher1709/Genealogy/docs"
+
+[tool.poetry]
+#packages = [{include = "src/pyshell"}]
+
+[tool.poetry.dependencies]
+# All are currently in [project.dependencies].
+
+# Use 'poetry install --with python_console'
+# to support the interactive Python debug console.
+[tool.poetry.group.python_console.dependencies]
+#ipython = "*"
+
+#[tool.poetry.group.typer_shell.dependencies]
+#typer_shell = ">=0.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
